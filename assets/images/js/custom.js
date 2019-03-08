@@ -44,7 +44,7 @@
 
 // TODO: call frc4135's event list and make countdown string next match
 
-	$('#mu-event-counter').countdown('2019/03/08 11:50:00').on('update.countdown', function(event) {
+	$('#mu-event-counter').countdown('2019/03/8 11:50:00').on('update.countdown', function(event) {
 	  var $this = $(this).html(event.strftime(''
 	    + '<span class="mu-event-counter-block"><span>%D</span> Days</span> '
 	    + '<span class="mu-event-counter-block"><span>%H</span> Hours</span> '
@@ -108,81 +108,6 @@
 
 
 	/* ----------------------------------------------------------- */
-	/*  4. VIDEO POPUP
-	/* ----------------------------------------------------------- */
-
-   $('.mu-video-play-btn').on('click', function(event) {
-
-        event.preventDefault();
-
-        $('.mu-video-iframe-area').addClass('mu-video-iframe-display');
-
-    });
-
-    // when click the close btn
-
-    // disappear iframe window
-
-    $('.mu-video-close-btn').on('click', function(event) {
-
-	    event.preventDefault();
-
-		$('.mu-video-iframe-area').removeClass('mu-video-iframe-display');
-
-    });
-
-    // stop iframe if it is play while close the iframe window
-
-    $('.mu-video-close-btn').click(function(){
-
-        $('.mu-video-iframe').attr('src', $('.mu-video-iframe').attr('src'));
-
-    });
-
-    // when click overlay area
-
-     $('.mu-video-iframe-area').on('click', function(event) {
-
-	    event.preventDefault();
-
-		$('.mu-video-iframe-area').removeClass('mu-video-iframe-display');
-
-    });
-
-	$('.mu-video-iframe-area, .mu-video-iframe').on('click', function(e){
-	    e.stopPropagation();
-	});
-
-
-	/* ----------------------------------------------------------- */
-	/*  5. SPEAKERS SLIDEER ( SLICK SLIDER )
-	/* ----------------------------------------------------------- */
-
-		$('.mu-speakers-slider').slick({
-		  slidesToShow: 4,
-		  responsive: [
-		    {
-		      breakpoint: 768,
-		      settings: {
-		        arrows: true,
-		        slidesToShow: 3
-		      }
-		    },
-		    {
-		      breakpoint: 480,
-		      settings: {
-		        arrows: true,
-		        slidesToShow: 1
-		      }
-		    }
-		  ]
-		});
-
-
-
-
-
-	/* ----------------------------------------------------------- */
 	/*  6. BOOTSTRAP ACCORDION
 	/* ----------------------------------------------------------- */
 
@@ -205,11 +130,6 @@
 	jQuery('.mu-menu').on('click', 'li a', function() {
 	  $('.mu-navbar .in').collapse('hide');
 	});
-
-
-
-
-
 
 
 })( jQuery );
