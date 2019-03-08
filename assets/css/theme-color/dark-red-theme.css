@@ -7,7 +7,7 @@ Author URI : http://www.markups.io/
 
 .mu-hero-overlay,
 .mu-video-overlay {
-	background-color: black;/* fallback for old browsers */
+	background: head-featured-bg.png;/* fallback for old browsers */
 }
 
 .mu-primary-btn:hover,
